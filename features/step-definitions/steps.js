@@ -10,7 +10,7 @@ Given(/^Maidzola is on the Login page$/, async () => {
 })
 
 When(/^Maidzola Login with "(.*)" credential$/, async (username) => {
-    await LoginPage.login(username)
+    cconsole.log(username)
 })
 
 Then (/^Maidzola should see error "(.*)"$/, async (message) => {
