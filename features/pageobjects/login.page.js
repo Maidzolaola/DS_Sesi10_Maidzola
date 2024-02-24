@@ -8,8 +8,9 @@ class LoginPage extends Page {
     get fieldPassword () {return $('#password');}
     get buttonLogin () { return $('#login-button');}
     errorLockedOutUser = (dynamicMessage) => $(`//h3[text()="${dynamicMessage}"]`)
+    errorBlank = (dynamicMessage) => $(`//h3[text()="${dynamicMessage}"]`)
     
-    async login (username, password) {
+    async login (username) {
         await this.fieldUsername.waitForDisplayed({ timeout: 2500 });
         await this.fieldUsername.setValue(username);
         await this.fieldPassword.setValue(process.env.PASSWORD_SAUCEDEMO);
@@ -19,7 +20,10 @@ class LoginPage extends Page {
         await this.errorLockedOutUser(message).waitForDisplayed({ timeout: 2500 });
         await expect(this.errorLockedOutUser(message)).toBeDisplayed()
     }
-    
+    async validateBlank (message) {
+        await this.errorBlank(message).waitForDisplayed({ timeout: 2500 });
+        await expect(this.errorBlank(message)).toBeDisplayed()
+    }
     open () {
         return super.open('/'); // NOTE: will open https://www.saucedemo.com/
     }

@@ -1,5 +1,5 @@
 {
-  "name": "DS_Sesi10_Maidzola",
+  "name": "ds_sesi10_maidzola",
   "devDependencies": {
     "@wdio/allure-reporter": "^8.32.2",
     "@wdio/cucumber-framework": "^8.32.3",
@@ -11,8 +11,9 @@
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js --cucumberOpts.tagExpression",
     "allure-commandline": "^2.27.0",
-    "generate-allure" : "./node_modules/.bin/allure generate allure-results/ --clean",
-    "open-allure": "./node_modules/.bin/allure open"
+    "generate-allure": ".\\node_modules\\.bin\\allure generate allure-results/ --clean",
+    "open-allure": ".\\node_modules\\.bin\\allure open"
+
   
   }
 }

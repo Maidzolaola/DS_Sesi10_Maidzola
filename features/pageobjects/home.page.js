@@ -45,10 +45,10 @@ class HomePage extends Page {
         await this.buttonCheckout.click()
     }
 
-    async Information (name, lastname, zip) {
-        await this.fieldName.setValue(name);
-        await this.fieldLastName.setValue(lastname);
-        await this.fieldZip.setValue(zip);
+    async Information () {
+        await this.fieldName.setValue(process.env.NAME);
+        await this.fieldLastName.setValue(process.env.LAST_NAME);
+        await this.fieldZip.setValue(process.env.ZIP);
         await this.buttonContinue.click()
         await this.buttonFinish.click()
         await this.buttonBackHome.click()
