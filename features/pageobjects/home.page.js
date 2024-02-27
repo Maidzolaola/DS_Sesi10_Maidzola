@@ -17,11 +17,12 @@ class HomePage extends Page {
     get buttonContinue () { return $('#continue');}
     get buttonFinish () { return $('#finish');}
     get buttonBackHome () { return $('#back-to-products');}
+    errorInformation = (errorstate) => $(`//h3[text()="${errorstate}"]`)
     
 
     //validate Home Page
     async validateHomePage() {
-        await expect(browser).toHaveUrlContaining('/inventory.html')
+        await expect(browser).toHaveUrl('https://www.saucedemo.com/inventory.html')
         await expect(this.iconCart).toBeDisplayed()
     }
 
@@ -55,8 +56,16 @@ class HomePage extends Page {
         await this.buttonBurger.click()
         await this.buttonLogout.click()
     }
+
+    async errorInformation(message) {
+        await this.fieldName.setValue(process.env.ERROR_INFORMATION);
+        await this.fieldLastName.setValue(process.env.ERROR_INFORMATION);
+        await this.fieldZip.setValue(process.env.ERROR_INFORMATION);
+        await this.buttonContinue.click()
+        await expect(this.errorInformation(message)).toBeDisplayed()
+    }
     open () {
-        return super.open('/inventory.html');
+        return super.open('https://www.saucedemo.com/inventory.html');
     }
 }
 

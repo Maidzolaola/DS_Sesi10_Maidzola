@@ -10,20 +10,16 @@ Given(/^Maidzola is on the Login page$/, async () => {
 })
 
 When(/^Maidzola Login with "(.*)" credential$/, async (username) => {
-    cconsole.log(username)
+    await LoginPage.login(username)
 })
 
 Then (/^Maidzola should see error "(.*)"$/, async (message) => {
     await LoginPage.validateLockedOutUserError(message)
 })
-
-Then (/^Maidzola should see error "(.*)"$/, async (message) => {
-    await LoginPage.errorBlank(message)
+Then (/^Maidzola Login with password "(.*)" credential$/, async (message) => {
+    await LoginPage.errorPassword(message)
 })
 
-When(/^Maidzola Login with blank "(.*)" credential$/, async (username) => {
-    console.log(username)
-})
 
 //steps for Home Page
 Then(/^Maidzola should see home page$/, async () => {
@@ -46,3 +42,6 @@ Then(/^Maidzola is on information page$/, async () => {
     await HomePage.Information()
 })
 
+Then(/^Maidzola is on Error Information$/, async () => {
+    await HomePage.errorInformation()
+})

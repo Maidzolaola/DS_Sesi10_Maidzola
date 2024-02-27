@@ -1,4 +1,4 @@
-@login
+@login_negative
 Feature: Swag Lab - Login
   Background: User on the Login page 
   Given Maidzola is on the Login page
@@ -13,3 +13,7 @@ Feature: Swag Lab - Login
   Scenario Outline: As a standard_user , I want to Log in successfully
     When Maidzola Login with "" credential
     Then Maidzola should see error "Epic sadface: Username is required"    
+
+@negative_login_3
+  Scenario Outline: As a standard_user , I want to Log in successfully
+    When Maidzola Login with password "" credential
