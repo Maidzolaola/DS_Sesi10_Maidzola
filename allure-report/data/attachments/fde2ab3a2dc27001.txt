@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//h3[text()=\"(error, result) => {\r\n                if ((0, value_checker_1.doesHaveValue)(error)) {\r\n                    reject(error);\r\n                }\r\n                else {\r\n                    resolve(result);\r\n                }\r\n            }\"]"
+}
