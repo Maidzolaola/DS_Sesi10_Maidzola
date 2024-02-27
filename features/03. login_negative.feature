@@ -17,3 +17,4 @@ Feature: Swag Lab - Login
 @negative_login_3
   Scenario Outline: As a standard_user , I want to Log in successfully
     When Maidzola Login with password "" credential
+    Then Maidzola should see error "Epic sadface: Password is required"  

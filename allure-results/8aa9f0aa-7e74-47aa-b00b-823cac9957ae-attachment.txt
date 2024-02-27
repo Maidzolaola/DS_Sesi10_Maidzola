@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//h3[text()=\"Epic sadface: Username is required\"]\"}\n  (Session info: chrome=122.0.6261.69)",
+  "stacktrace": "\tGetHandleVerifier [0x00007FF628D64C82+3505170]\n\t(No symbol) [0x00007FF628990852]\n\t(No symbol) [0x00007FF628844145]\n\t(No symbol) [0x00007FF628889ADD]\n\t(No symbol) [0x00007FF628889C1C]\n\t(No symbol) [0x00007FF6288CAB27]\n\t(No symbol) [0x00007FF6288ABECF]\n\t(No symbol) [0x00007FF6288C83B2]\n\t(No symbol) [0x00007FF6288ABC33]\n\t(No symbol) [0x00007FF62887D618]\n\t(No symbol) [0x00007FF62887E6B1]\n\tGetHandleVerifier [0x00007FF628D967DD+3708781]\n\tGetHandleVerifier [0x00007FF628DEFC5D+4074477]\n\tGetHandleVerifier [0x00007FF628DE7DDF+4042095]\n\tGetHandleVerifier [0x00007FF628ABA136+708806]\n\t(No symbol) [0x00007FF62899CB0F]\n\t(No symbol) [0x00007FF628997D14]\n\t(No symbol) [0x00007FF628997E6C]\n\t(No symbol) [0x00007FF6289879A4]\n\tBaseThreadInitThunk [0x00007FF90D43257D+29]\n\tRtlUserThreadStart [0x00007FF90E8EAA58+40]\n"
+}

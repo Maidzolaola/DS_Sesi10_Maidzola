@@ -17,7 +17,7 @@ Then (/^Maidzola should see error "(.*)"$/, async (message) => {
     await LoginPage.validateLockedOutUserError(message)
 })
 Then (/^Maidzola Login with password "(.*)" credential$/, async (message) => {
-    await LoginPage.errorPassword(message)
+    await LoginPage.validateerrorPassword(message)
 })
 
 
@@ -42,6 +42,6 @@ Then(/^Maidzola is on information page$/, async () => {
     await HomePage.Information()
 })
 
-Then(/^Maidzola is on Error Information$/, async () => {
-    await HomePage.errorInformation()
+Then(/^Maidzola is on Error Information "(.*)"$/, async () => {
+    await HomePage.validateerrorInformation()
 })

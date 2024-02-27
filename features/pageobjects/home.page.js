@@ -17,7 +17,7 @@ class HomePage extends Page {
     get buttonContinue () { return $('#continue');}
     get buttonFinish () { return $('#finish');}
     get buttonBackHome () { return $('#back-to-products');}
-    errorInformation = (errorstate) => $(`//h3[text()="${errorstate}"]`)
+    errorInformation = (dynamicMessage) => $(`//h3[text()="${dynamicMessage}"]`)
     
 
     //validate Home Page
@@ -57,11 +57,12 @@ class HomePage extends Page {
         await this.buttonLogout.click()
     }
 
-    async errorInformation(message) {
-        await this.fieldName.setValue(process.env.ERROR_INFORMATION);
-        await this.fieldLastName.setValue(process.env.ERROR_INFORMATION);
-        await this.fieldZip.setValue(process.env.ERROR_INFORMATION);
+    async validateerrorInformation(message,fieldLastName) {
+        await this.fieldName.setValue(process.env.NAME);
+       
+        await this.fieldZip.setValue(process.env.ZIP);
         await this.buttonContinue.click()
+        await this.errorInformation(message).waitForDisplayed({ timeout: 2500 });
         await expect(this.errorInformation(message)).toBeDisplayed()
     }
     open () {
