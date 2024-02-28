@@ -12,4 +12,5 @@ Scenario Outline: As a standard_user , I want to Fill Information Fields
     When Maidzola taps on add cart button
     And successfully add to cart
     And Maidzola taps on checkout button
-    Then Maidzola is on Error Information "Error: Last Name is required"
+    And Maidzola is on Error Information
+    Then Maidzola should see error "Error: Last Name is required"

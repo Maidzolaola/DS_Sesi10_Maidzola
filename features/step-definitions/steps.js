@@ -42,6 +42,6 @@ Then(/^Maidzola is on information page$/, async () => {
     await HomePage.Information()
 })
 
-Then(/^Maidzola is on Error Information "(.*)"$/, async () => {
+Then(/^Maidzola is on Error Information$/, async () => {
     await HomePage.validateerrorInformation()
 })
