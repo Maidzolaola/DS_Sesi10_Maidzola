@@ -17,7 +17,6 @@ class HomePage extends Page {
     get buttonContinue () { return $('#continue');}
     get buttonFinish () { return $('#finish');}
     get buttonBackHome () { return $('#back-to-products');}
-    errorInformation = (dynamicMessage) => $(`//h3[text()="${dynamicMessage}"]`)
     
 
     //validate Home Page
@@ -57,13 +56,22 @@ class HomePage extends Page {
         await this.buttonLogout.click()
     }
 
-    async validateerrorInformation(message) {
+    async errorname() {
+        await this.buttonContinue.click()
+    }
+
+    async errorlastname() {
         await this.fieldName.setValue(process.env.NAME);
         await this.fieldZip.setValue(process.env.ZIP);
         await this.buttonContinue.click()
-        // await this.errorInformation(message).waitForDisplayed({ timeout: 2500 });
-        // await expect(this.errorInformation(message)).toBeDisplayed()
     }
+
+    async errorzip() {
+        await this.fieldName.setValue(process.env.NAME);
+        await this.fieldLastName.setValue(process.env.LAST_NAME);
+        await this.buttonContinue.click()
+    }
+
     open () {
         return super.open('https://www.saucedemo.com/inventory.html');
     }

@@ -42,6 +42,14 @@ Then(/^Maidzola is on information page$/, async () => {
     await HomePage.Information()
 })
 
-Then(/^Maidzola is on Error Information$/, async () => {
-    await HomePage.validateerrorInformation()
+Then(/^Maidzola is on Error first name$/, async () => {
+    await HomePage.errorname()
+})
+
+Then(/^Maidzola is on Error last name$/, async () => {
+    await HomePage.errorlastname()
+})
+
+Then(/^Maidzola is on Error ZIP$/, async () => {
+    await HomePage.errorzip()
 })
