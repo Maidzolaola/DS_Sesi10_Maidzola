@@ -1,4 +1,4 @@
-@digital-skola @homepage
+@homepage
 Feature: Swag Lab - Home Page
 
 Background: User can Check Out Product

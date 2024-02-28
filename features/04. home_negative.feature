@@ -1,4 +1,4 @@
-@digital-skola @homepage_negative
+@homepage_negative
 Feature: Swag Lab - Home Page
 
 Background: User can't Check Out Product
